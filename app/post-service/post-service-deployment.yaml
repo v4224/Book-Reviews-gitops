@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: post-service
-        image: hoangvu42/post-service:v1
+        image: hoangvu42/post-service:develop-7b2eb37
         ports:
         - containerPort: 8083
         env:

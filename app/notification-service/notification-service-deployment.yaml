@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: notification-service
-        image: hoangvu42/notification-service:v1
+        image: hoangvu42/notification-service:develop-7b2eb37
         ports:
         - containerPort: 8082
         env:

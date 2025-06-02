@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: identity-service
-        image: hoangvu42/identity-service:v1
+        image: hoangvu42/identity-service:develop-7b2eb37
         ports:
         - containerPort: 8080
         env:
