@@ -1,0 +1,3 @@
+**/*-secret.yaml
+dev/**/*-secret.yaml
+prod/**/**-secret.yaml
