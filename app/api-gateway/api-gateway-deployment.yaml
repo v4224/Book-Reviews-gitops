@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: api-gateway
-          image: hoangvu42/api-gateway:prod-8
+          image: hoangvu42/api-gateway:prod-2025-06-03_13-19-11
           ports:
             - containerPort: 8888
           envFrom:
