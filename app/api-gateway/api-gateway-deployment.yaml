@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: api-gateway
-          image: nnhainam/api-gateway:v1
+          image: hoangvu42/api-gateway:develop-6298320
           ports:
             - containerPort: 8888
           envFrom:

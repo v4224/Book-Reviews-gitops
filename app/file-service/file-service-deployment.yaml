@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: file-service
-        image: nnhainam/file-service:v1
+        image: hoangvu42/file-service:develop-6298320
         ports:
         - containerPort: 8084
         env:
