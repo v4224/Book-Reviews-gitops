@@ -2,10 +2,11 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: file-service-pvc
+  namespace: book-review
 spec:
   accessModes:
     - ReadWriteMany
   resources:
     requests:
-      storage: 5Gi
-  volumeName: file-service-pv # Liên kết trực tiếp với PV đã tạo
+      storage: 2Gi
+  storageClassName: nfs-storage

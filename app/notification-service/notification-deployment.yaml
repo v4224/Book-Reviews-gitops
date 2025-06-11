@@ -2,20 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: notification-service-deployment
-  namespace: app
+  namespace: book-review
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: notification-service
+      app: notification-service-pod
   template:
     metadata:
       labels:
-        app: notification-service
+        app: notification-service-pod
     spec:
       containers:
       - name: notification-service
-        image: hoangvu42/notification-service:develop-d7b9f0e
+        image: nnhainam/notification-service-img:v1
         ports:
         - containerPort: 8082
         env:

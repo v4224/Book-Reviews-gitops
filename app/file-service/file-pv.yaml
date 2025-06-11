@@ -4,10 +4,11 @@ metadata:
   name: file-service-pv
 spec:
   capacity:
-    storage: 5Gi
+    storage: 2Gi
   accessModes:
     - ReadWriteMany
-  storageClassName: standard
+  storageClassName: nfs-storage
   persistentVolumeReclaimPolicy: Retain
-  hostPath:
-    path: /mnt/data/file-upload  # Đường dẫn trên node Kubernetes (máy host)
+  nfs:
+    path: /data/file-service-data
+    server: 192.168.1.120

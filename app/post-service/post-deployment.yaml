@@ -2,20 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: post-service-deployment
-  namespace: app
+  namespace: book-review
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: post-service
+      app: post-service-pod
   template:
     metadata:
       labels:
-        app: post-service
+        app: post-service-pod
     spec:
       containers:
       - name: post-service
-        image: hoangvu42/post-service:develop-d7b9f0e
+        image: nnhainam/post-service-img:v1
         ports:
         - containerPort: 8083
         env:

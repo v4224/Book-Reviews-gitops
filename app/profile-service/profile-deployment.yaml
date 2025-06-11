@@ -2,20 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: profile-service-deployment
-  namespace: app
+  namespace: book-review
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: profile-service
+      app: profile-service-pod
   template:
     metadata:
       labels:
-        app: profile-service
+        app: profile-service-pod
     spec:
       containers:
       - name: profile-service
-        image: hoangvu42/profile-service:develop-d7b9f0e
+        image: nnhainam/profile-service-img:v1
         ports:
         - containerPort: 8081
         env:

@@ -2,22 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: file-service-deployment
-  namespace: app
+  namespace: book-review
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: file-service
+      app: file-service-pod
   template:
     metadata:
       labels:
-        app: file-service
+        app: file-service-pod
     spec:
-      nodeSelector:
-        file-service-node: "true"
       containers:
       - name: file-service
-        image: hoangvu42/file-service:v1
+        image: nnhainam/file-service-img:v1
         ports:
         - containerPort: 8084
         env:
@@ -46,6 +44,16 @@ spec:
             configMapKeyRef:
               name: file-service-config
               key: MONGO_PORT
+        - name: DOWNLOAD-PREFIX
+          valueFrom:
+            configMapKeyRef:
+              name: file-service-config
+              key: DOWNLOAD-PREFIX
+        - name: DOWNLOAD-PORT
+          valueFrom:
+            configMapKeyRef:
+              name: file-service-config
+              key: DOWNLOAD-PORT
         volumeMounts:
         - name: uploads-volume
           mountPath: /app/uploads
