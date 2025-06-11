@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: notification-service
-        image: nnhainam/notification-service-img:v1
+        image: nnhainam/notification-service:v1
         ports:
         - containerPort: 8082
         env:
