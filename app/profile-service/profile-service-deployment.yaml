@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: profile-service
-        image: hoangvu42/profile-service:develop-6298320
+        image: hoangvu42/profile-service:develop-e56dbbe
         ports:
         - containerPort: 8081
         env:
