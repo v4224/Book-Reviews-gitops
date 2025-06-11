@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: api-gateway
-          image: nnhainam/api-gateway-bookharinem:v1
+          image: nnhainam/api-gateway:v1
           ports:
             - containerPort: 8888
           envFrom:
