@@ -61,3 +61,5 @@ spec:
       - name: uploads-volume
         persistentVolumeClaim:
           claimName: file-service-pvc
+      imagePullSecrets:
+        - name: harbor-secret

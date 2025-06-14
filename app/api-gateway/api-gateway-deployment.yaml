@@ -21,3 +21,5 @@ spec:
           envFrom:
             - configMapRef:
                 name: api-gateway-config
+      imagePullSecrets:
+        - name: harbor-secret

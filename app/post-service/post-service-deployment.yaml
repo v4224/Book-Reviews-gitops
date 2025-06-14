@@ -48,5 +48,7 @@ spec:
           valueFrom:
             configMapKeyRef:
               name: post-config
-              key: PROFILE_SERVICE_PORT   
+              key: PROFILE_SERVICE_PORT
+      imagePullSecrets:
+        - name: harbor-secret   
         

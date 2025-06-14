@@ -54,3 +54,5 @@ spec:
             secretKeyRef:
               name: notification-secret
               key: BREVO_API_KEY
+      imagePullSecrets:
+        - name: harbor-secret

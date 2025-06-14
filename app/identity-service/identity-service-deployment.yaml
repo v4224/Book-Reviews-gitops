@@ -59,3 +59,5 @@ spec:
             configMapKeyRef:
               name: identity-config
               key: PROFILE_PORT
+      imagePullSecrets:
+        - name: harbor-secret
