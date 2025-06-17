@@ -59,5 +59,12 @@ spec:
             configMapKeyRef:
               name: identity-config
               key: PROFILE_PORT
+        resources:
+          requests:
+            cpu: "500m"
+            memory: "512Mi"
+          limits:
+            memory: "512Mi"
+
       imagePullSecrets:
         - name: harbor-secret
