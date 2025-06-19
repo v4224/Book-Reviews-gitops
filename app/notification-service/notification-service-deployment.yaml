@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: notification-service
-        image: registry.harinemdevops.online/book-reviews/notification-service:develop-1baa97a
+        image: registry.harinemdevops.online/book-reviews/notification-service:develop-df89c08
         ports:
         - containerPort: 8082
         env:
