@@ -9,7 +9,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - hosts: argocd.argocdbookharinem.online
+    - hosts: argocd.harinemdevops.online
       http:
         paths:
           - path: /
